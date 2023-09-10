@@ -1,1 +1,1 @@
-Web page showcasing personal and real-time data atrributes.
+Web page (html,css and js) showcasing personal and real-time data atrributes.
