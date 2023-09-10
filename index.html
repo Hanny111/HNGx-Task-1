@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal-Profile-Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="web-card">
+        <div class="web-card-header">
+    <h1 data-testid="slackUserName">HNLRocks</h1>
+        </div>
+        <div class="web-card-content">
+<img src="https://ca.slack-edge.com/T05FFAA91JP-U05R58HQS1L-6a74fb23a6ee-512" alt="Haniel" data-testid="slackDisplayImage">
+<h4><p data-testid="currentDayOfTheWeek">Thursday</p></h4>
+<h4><p data-testid="currentUTCTime">Loading UTC time</p></h4>
+   <h4> <p data-testid="myTrack">Frontend</p></h4>
+    <a href="https://github.com/Hanny111/Personal-Profile-Page" data-testid="githubURL">GitHub Repository</a>
+    </div>
+    </div>
+<script src="script.js"></script>
+
+    <script>
+        function updateCurrentTime() {
+            const currentTimeElement = document.querySelector('[data-testid="currentUTCTime"]');
+            const currentTimeMillis = new Date().getTime();
+            currentTimeElement.textContent = `Current Time (in ms): ${currentTimeMillis}`;
+        }
+
+        
+        setInterval(updateCurrentTime, 1000);
+        
+        updateCurrentTime();
+    </script>
+
+</body>
+</html>
+
